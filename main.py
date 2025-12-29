@@ -1,6 +1,5 @@
-def main():
-    print("Hello from polyalign!")
+from alignment.argmax import argmax_align
+from models.similarity import similarity_matrix
 
-
-if __name__ == "__main__":
-    main()
+S = similarity_matrix("Hello World","Hello World")
+print(argmax_align(S))  

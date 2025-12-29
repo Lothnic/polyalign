@@ -1,5 +1,5 @@
 import numpy as np
-from ..models.similarity import similarity_matrix
+from models.similarity import similarity_matrix
 
 def argmax_align(S):
     aligns = []
@@ -9,7 +9,7 @@ def argmax_align(S):
 
     for i, j in enumerate(row_max):
         if col_max[j] == i:
-            aligns.append((i, j))
+            aligns.append((i, int(j)))
 
     return aligns
 
